@@ -9,13 +9,10 @@ namespace Cat_Adventure
 
     internal class Cat
     {
-        private string name;
+        public string name;
         private string color;
-        public string state
-        {
-            get { return state; }
-            set { state = value; }
-        }
+        private string state;
+        
 
         public Cat()
         {
