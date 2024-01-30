@@ -8,12 +8,15 @@ namespace Cat_Adventure
 {
     internal class GameManager
     {
+        public GameState GameState { get; private set; }
+
+        Cat cat = new Cat();
         public GameManager() 
         { }
 
         public void Run()
         {
-            Console.WriteLine("Hello World!");
+            Console.WriteLine("Hello World of Cats!");
         }
     }
 }
