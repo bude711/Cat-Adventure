@@ -6,11 +6,22 @@ using System.Threading.Tasks;
 
 namespace Cat_Adventure
 {
+
     internal class Cat
     {
+        private string name;
+        private string color;
+        public string state
+        {
+            get { return state; }
+            set { state = value; }
+        }
+
         public Cat()
         {
-            Console.WriteLine("Cat created!");
+            name = "Bean";
+            color = "Tabby";
+            state = "Happy";
         }
     }
 }
