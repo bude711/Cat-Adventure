@@ -27,7 +27,7 @@ namespace Cat_Adventure
 
         public void Run()
         {
-            Console.WriteLine("Hello World of Cats!");
+            outputProvider.WriteLine("Hello World of Cats!");
         }
     }
 }
