@@ -8,4 +8,6 @@ Christina Sherman
 Christine Joo
 Brandi Ude
 Dennie Chan
+
 We Love Cats!-BU
+Cats are cool!-CJ
