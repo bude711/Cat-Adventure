@@ -4,13 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Cat_Adventure
+namespace Cat_Adventure.Interfaces
 {
-    public enum Locations
+    internal interface IInputProvider
     {
-        Home,
-        Park,
-        Alley,
-        Bodega,
+        string Read();
     }
 }

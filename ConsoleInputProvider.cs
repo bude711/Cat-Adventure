@@ -6,11 +6,11 @@ using System.Threading.Tasks;
 
 namespace Cat_Adventure
 {
-    public enum Locations
+    internal class ConsoleInputProvider: Interfaces.IInputProvider
     {
-        Home,
-        Park,
-        Alley,
-        Bodega,
+        public string Read()
+        {
+            return Console.ReadLine();
+        }
     }
 }
