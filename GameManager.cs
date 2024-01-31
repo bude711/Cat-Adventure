@@ -29,6 +29,7 @@ namespace Cat_Adventure
         public void Run()
         {
             outputProvider.WriteLine("Welcome to Cat Adventure!");
+            GraphicalStuff.WelcomeScreen(outputProvider);
             GameState = GameState.GameStarted;
             Thread.Sleep(2000);
             outputProvider.WriteLine();
