@@ -28,6 +28,7 @@ namespace Cat_Adventure
         public void Run()
         {
             outputProvider.WriteLine("Hello World of Cats!");
+            GraphicalStuff.WalkingCat(outputProvider);
         }
     }
 }
