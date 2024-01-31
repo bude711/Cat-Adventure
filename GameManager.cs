@@ -79,7 +79,8 @@ namespace Cat_Adventure
 
         public void handleDog()
         {
-            outputProvider.WriteLine("Oh no! On your walk you encounter a dog!");           
+            outputProvider.WriteLine("Oh no! On your walk you encounter a dog!");  
+            GraphicalStuff.DogEncounter(outputProvider);
             outputProvider.WriteLine("What do you do?");
             outputProvider.WriteLine();
             outputProvider.WriteLine("1. hiss at the dog");
