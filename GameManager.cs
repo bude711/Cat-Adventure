@@ -34,8 +34,8 @@ namespace Cat_Adventure
             outputProvider.WriteLine();
             chooseDestination();
             handleDog();
+            reachedDestination();           
             
-            //GraphicalStuff.WalkingCat(outputProvider);
         }
 
         public void chooseDestination() {
@@ -114,6 +114,15 @@ namespace Cat_Adventure
             outputProvider.WriteLine("Hit any key to continue.");
             Console.ReadKey();
             GraphicalStuff.WalkingCat(outputProvider);
+
+        }
+
+        public void reachedDestination()
+        {
+            outputProvider.WriteLine("Congratulations! You've arrived at your destination.");
+            outputProvider.WriteLine("Your friends are here!");
+            outputProvider.WriteLine("Now it's time for a cat party!");
+
 
         }
     }
