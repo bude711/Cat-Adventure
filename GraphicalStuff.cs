@@ -73,6 +73,23 @@ namespace Cat_Adventure
 
             }
         }
+
+        public static void WelcomeScreen(IOutputProvider outputProvider)
+        {
+            Console.Clear();
+            Console.WriteLine();
+            outputProvider.WriteLine("Welcome to Cat Adventure!", Color.Green);
+            outputProvider.WriteLine("      ,_ _");
+            outputProvider.WriteLine("      |\\_,-~/");
+            outputProvider.WriteLine("      / _  _ |    ,--.");
+            outputProvider.WriteLine("     (  @  @ )   / ,-'");
+            outputProvider.WriteLine("     \\  _T_/-._( (");
+            outputProvider.WriteLine("      /         `. \\");
+            outputProvider.WriteLine("     |         _  \\ |");
+            outputProvider.WriteLine("     \\ \\ ,  /      |");
+            outputProvider.WriteLine("       || |-_\\__   /");
+            outputProvider.WriteLine("      ((_/`(____,-'");
+            outputProvider.WriteLine();
+        }
     }
 }
-
