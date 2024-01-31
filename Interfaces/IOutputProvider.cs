@@ -1,4 +1,4 @@
-﻿using System;
+﻿using System.Drawing;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -10,6 +10,8 @@ namespace Cat_Adventure.Interfaces
     {
         void Write(string message);
         void WriteLine(string message);
+
+        void WriteLine(string message, Color color);
 
         void WriteLine();
 

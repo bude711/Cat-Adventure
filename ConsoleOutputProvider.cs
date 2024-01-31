@@ -1,4 +1,5 @@
 ﻿using Cat_Adventure.Interfaces;
+using System.Drawing;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -22,6 +23,11 @@ namespace Cat_Adventure
         public void WriteLine(string message)
         {
             Console.WriteLine(message);
+        }
+
+        public void WriteLine(string message, Color color)
+        {
+            Console.WriteLine(message, color);
         }
 
         public void WriteLine()
