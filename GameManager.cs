@@ -33,6 +33,7 @@ namespace Cat_Adventure
             Thread.Sleep(2000);
             outputProvider.WriteLine();
             chooseDestination();
+            handleDog();
             
             //GraphicalStuff.WalkingCat(outputProvider);
         }
@@ -49,18 +50,18 @@ namespace Cat_Adventure
 
             var choice = inputProvider.Read();
             if (choice.Contains('1')) {
-                outputProvider.WriteLine("You’ve chosen to go to the the Park!");
+                outputProvider.WriteLine("You’ve chosen to go to the Park!");
                 outputProvider.WriteLine();
                 outputProvider.WriteLine("You exit your home and start your journey!");
             }
             else if (choice.Contains('2')) {
-                outputProvider.WriteLine("You’ve chosen to go to the the Bodega!");
+                outputProvider.WriteLine("You’ve chosen to go to the Bodega!");
                 outputProvider.WriteLine();
                 outputProvider.WriteLine("You exit your home and start your journey!");
             }
             else if (choice.Contains('3'))
             {
-                outputProvider.WriteLine("You’ve chosen to go to the the Alleyway!");
+                outputProvider.WriteLine("You’ve chosen to go to the Alleyway!");
                 outputProvider.WriteLine();
                 outputProvider.WriteLine("You exit your home and start your journey!");
             }
@@ -77,7 +78,43 @@ namespace Cat_Adventure
 
         public void handleDog()
         {
-            outputProvider.WriteLine("Oh no! On your walk you encounter a dog!");
+            outputProvider.WriteLine("Oh no! On your walk you encounter a dog!");           
+            outputProvider.WriteLine("What do you do?");
+            outputProvider.WriteLine();
+            outputProvider.WriteLine("1. hiss at the dog");
+            outputProvider.WriteLine("2. run around the dog");
+            outputProvider.WriteLine("3. high-five the dog");
+            outputProvider.WriteLine();
+            outputProvider.WriteLine("Please enter the number you would like to choose.");
+
+            var choice = inputProvider.Read();
+            if (choice.Contains('1'))
+            {
+                outputProvider.WriteLine("You’ve chosen to hiss at the dog!");
+                outputProvider.WriteLine();
+                outputProvider.WriteLine("You scare off the dog and continue on your path.");
+            }
+            else if (choice.Contains('2'))
+            {
+                outputProvider.WriteLine("You’ve chosen to run around the dog!");
+                outputProvider.WriteLine();
+                outputProvider.WriteLine("You bolt into the next street, finding a new path to your destination.");
+            }
+            else if (choice.Contains('3'))
+            {
+                outputProvider.WriteLine("You’ve chosen to high-five the dog!");
+                outputProvider.WriteLine();
+                outputProvider.WriteLine("This dog happens to be a friend! You greet each other and then continue to your destination.");
+            }
+            else
+            {
+                outputProvider.WriteLine("Not a valid option. The dog's owner calls him and your path is cleared.");
+            }
+            outputProvider.WriteLine();
+            outputProvider.WriteLine("Hit any key to continue.");
+            Console.ReadKey();
+            GraphicalStuff.WalkingCat(outputProvider);
+
         }
     }
 }
