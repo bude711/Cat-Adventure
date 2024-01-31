@@ -78,7 +78,6 @@ namespace Cat_Adventure
         {
             Console.Clear();
             Console.WriteLine();
-            outputProvider.WriteLine("Welcome to Cat Adventure!", Color.Green);
             outputProvider.WriteLine("      ,_ _");
             outputProvider.WriteLine("      |\\_,-~/");
             outputProvider.WriteLine("      / _  _ |    ,--.");
