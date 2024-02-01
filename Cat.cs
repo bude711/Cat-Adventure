@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Cat_Adventure.Interfaces;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -9,16 +10,22 @@ namespace Cat_Adventure
 
     internal class Cat
     {
-        public string name;
-        private string color;
-        private string state;
-        
+        public string name { get; set; }
+        public string color { get; set; }
+        public string state { get; set; }
 
-        public Cat()
+ 
+        public Cat(IInputProvider inputProvider, IOutputProvider outputProvider)
         {
-            name = "Bean";
-            color = "Tabby";
-            state = "Happy";
+            // Prompt player to enter the name of the cat
+            outputProvider.WriteLine("Please enter the name of your cat: ");
+            name = inputProvider.Read();
+
+            outputProvider.WriteLine("Please enter the color of your cat: ");
+            color = inputProvider.Read();
+
+            outputProvider.WriteLine("Please enter the mood of your cat: ");
+            state = inputProvider.Read();
         }
     }
 }

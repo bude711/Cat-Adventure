@@ -77,7 +77,7 @@ namespace Cat_Adventure
 
         public static void WelcomeScreen(IOutputProvider outputProvider)
         {
-            Console.Clear();
+            // Console.Clear();
             Console.WriteLine();
             outputProvider.WriteLine("      ,_  ", Color.DarkOrange);
             outputProvider.WriteLine("      |\\_,-~/|", Color.Orange);
