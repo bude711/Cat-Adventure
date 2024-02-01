@@ -98,22 +98,19 @@ namespace Cat_Adventure
             if (choice.Contains('1'))
             {
                 outputProvider.WriteLine();
-                outputProvider.WriteLine("You’ve chosen to hiss at the dog!");
-                outputProvider.WriteLine();
+                outputProvider.WriteLine("You’ve chosen to hiss at the dog!");               
                 outputProvider.WriteLine("You scare off the dog and continue on your path.");
             }
             else if (choice.Contains('2'))
             {
                 outputProvider.WriteLine();
-                outputProvider.WriteLine("You’ve chosen to run around the dog!");
-                outputProvider.WriteLine();
+                outputProvider.WriteLine("You’ve chosen to run around the dog!");               
                 outputProvider.WriteLine("You bolt into the next street, finding a new path to your destination.");
             }
             else if (choice.Contains('3'))
             {
                 outputProvider.WriteLine();
-                outputProvider.WriteLine("You’ve chosen to high-five the dog!");
-                outputProvider.WriteLine();
+                outputProvider.WriteLine("You’ve chosen to high-five the dog!");               
                 outputProvider.WriteLine("This dog happens to be a friend! You greet each other and then continue to your destination.");
             }
             else
