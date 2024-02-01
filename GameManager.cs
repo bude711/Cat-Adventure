@@ -1,4 +1,5 @@
 ﻿using Cat_Adventure.Interfaces;
+using Console = Colorful.Console;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -15,7 +16,7 @@ namespace Cat_Adventure
         private IOutputProvider outputProvider;
         public GameState GameState { get; private set; }
 
-        Cat cat = new Cat();
+        public Cat? cat;
         public GameManager() : this(new ConsoleInputProvider(), new ConsoleOutputProvider())
         {
         }
@@ -26,7 +27,6 @@ namespace Cat_Adventure
             GameState = GameState.WaitingToStart;
         }
 
-
         public void Run()
         {
             PlayMp3FromFilePath("animal_crossing.mp3");    
@@ -35,11 +35,15 @@ namespace Cat_Adventure
         public void StoryEvents()
         {
             outputProvider.WriteLine("Welcome to Cat Adventure!");
+            outputProvider.WriteLine("=========================\n");
             GraphicalStuff.WelcomeScreen(outputProvider);
+            outputProvider.WriteLine("Press a key to continue\n");
+            Console.ReadKey();
+            
             GameState = GameState.GameStarted;
-            Thread.Sleep(2000);
-            outputProvider.WriteLine();
-            chooseDestination();
+            cat = new Cat(inputProvider, outputProvider);
+
+            cat.state = ChooseDestination.LocationOne(inputProvider, outputProvider, cat);
             handleDog();
             reachedDestination();
         }
@@ -57,47 +61,49 @@ namespace Cat_Adventure
             }
         }
 
-        public void chooseDestination() {
-            outputProvider.WriteLine("You are a cat and you want to go meet up with your cat friends.");
-            outputProvider.WriteLine("Where do you want to go look for them?");
-            outputProvider.WriteLine();
-            outputProvider.WriteLine("1. the Park");
-            outputProvider.WriteLine("2. the Bodega");
-            outputProvider.WriteLine("3. the Alleyway");
-            outputProvider.WriteLine();
-            outputProvider.WriteLine("Please enter the number you would like to choose.");
+        //public void chooseDestination() {
+        //    //outputProvider.WriteLine("You are a cat and you want to go meet up with your cat friends.");
+        //    outputProvider.WriteLine($"You are a {cat.name}, a {cat.state} {cat.color} cat and you want to go meet up with your cat friends.");
+        //    outputProvider.WriteLine("Where do you want to go look for them?");
+        //    outputProvider.WriteLine();
+        //    outputProvider.WriteLine("1. the Park");
+        //    outputProvider.WriteLine("2. the Bodega");
+        //    outputProvider.WriteLine("3. the Alleyway");
+        //    outputProvider.WriteLine();
+        //    outputProvider.WriteLine("Please enter the number you would like to choose.");
 
-            var choice = inputProvider.Read();
-            if (choice.Contains('1')) {
-                outputProvider.WriteLine("You’ve chosen to go to the Park!");
-                outputProvider.WriteLine();
-                outputProvider.WriteLine("You exit your home and start your journey!");
-            }
-            else if (choice.Contains('2')) {
-                outputProvider.WriteLine("You’ve chosen to go to the Bodega!");
-                outputProvider.WriteLine();
-                outputProvider.WriteLine("You exit your home and start your journey!");
-            }
-            else if (choice.Contains('3'))
-            {
-                outputProvider.WriteLine("You’ve chosen to go to the Alleyway!");
-                outputProvider.WriteLine();
-                outputProvider.WriteLine("You exit your home and start your journey!");
-            }
-            else
-            {
-                outputProvider.WriteLine("Not a valid option. The cat gods have made the decision for you and you will be going to the dump.");
-            }
-            outputProvider.WriteLine();
-            outputProvider.WriteLine("Hit any key to continue.");
-            Console.ReadKey();
+        //    var choice = inputProvider.Read();
+        //    if (choice.Contains('1')) {
+        //        outputProvider.WriteLine("You’ve chosen to go to the Park!");
+        //        outputProvider.WriteLine();
+        //        outputProvider.WriteLine("You exit your home and start your journey!");
+        //    }
+        //    else if (choice.Contains('2')) {
+        //        outputProvider.WriteLine("You’ve chosen to go to the Bodega!");
+        //        outputProvider.WriteLine();
+        //        outputProvider.WriteLine("You exit your home and start your journey!");
+        //    }
+        //    else if (choice.Contains('3'))
+        //    {
+        //        outputProvider.WriteLine("You’ve chosen to go to the Alleyway!");
+        //        outputProvider.WriteLine();
+        //        outputProvider.WriteLine("You exit your home and start your journey!");
+        //    }
+        //    else
+        //    {
+        //        outputProvider.WriteLine("Not a valid option. The cat gods have made the decision for you and you will be going to the dump.");
+        //    }
+        //    outputProvider.WriteLine();
+        //    outputProvider.WriteLine("Hit any key to continue.");
+        //    Console.ReadKey();
 
-            GraphicalStuff.WalkingCat(outputProvider);
-        }
+        //    GraphicalStuff.WalkingCat(outputProvider);
+        //}
 
         public void handleDog()
         {
-            outputProvider.WriteLine("Oh no! On your walk you encounter a dog!");           
+              
+            GraphicalStuff.DogEncounter(outputProvider);
             outputProvider.WriteLine("What do you do?");
             outputProvider.WriteLine();
             outputProvider.WriteLine("1. hiss at the dog");

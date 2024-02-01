@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Drawing;
+using Console = Colorful.Console;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -76,19 +77,35 @@ namespace Cat_Adventure
 
         public static void WelcomeScreen(IOutputProvider outputProvider)
         {
-            Console.Clear();
+            // Console.Clear();
             Console.WriteLine();
-            outputProvider.WriteLine("      ,_ _");
-            outputProvider.WriteLine("      |\\_,-~/");
-            outputProvider.WriteLine("      / _  _ |    ,--.");
-            outputProvider.WriteLine("     (  @  @ )   / ,-'");
-            outputProvider.WriteLine("     \\  _T_/-._( (");
-            outputProvider.WriteLine("      /         `. \\");
-            outputProvider.WriteLine("     |         _  \\ |");
-            outputProvider.WriteLine("     \\ \\ ,  /      |");
-            outputProvider.WriteLine("       || |-_\\__   /");
-            outputProvider.WriteLine("      ((_/`(____,-'");
+            outputProvider.WriteLine("      ,_  ", Color.DarkOrange);
+            outputProvider.WriteLine("      |\\_,-~/|", Color.Orange);
+            outputProvider.WriteLine("      / _  _ |    ,--.", Color.DarkOrange);
+            outputProvider.WriteLine("     (  @  @ )   / ,-'", Color.Orange);
+            outputProvider.WriteLine("     \\  _T_ /-._( (", Color.Orange);
+            outputProvider.WriteLine("      /         `. \\", Color.OrangeRed);
+            outputProvider.WriteLine("      |         _  \\ |", Color.Orange);
+            outputProvider.WriteLine("      \\ \\ ,  /      |", Color.DarkOrange);
+            outputProvider.WriteLine("       || |-_\\__   /", Color.DarkOrange);
+            outputProvider.WriteLine("      ((_/`(____,-'", Color.OrangeRed);
             outputProvider.WriteLine();
+        }
+
+        public static void DogEncounter(IOutputProvider outputProvider)
+        {
+            Console.Clear();
+            outputProvider.WriteLine("Oh no! On your walk you encounter a dog!");
+            outputProvider.WriteLine();
+            outputProvider.WriteLine("              |\\_ /| ", Color.Brown);
+            outputProvider.WriteLine("              | @ @   Woof!", Color.Brown);
+            outputProvider.WriteLine("              |   <>                _", Color.Brown);
+            outputProvider.WriteLine("              | _ /\\------____   ((| |))", Color.RosyBrown);
+            outputProvider.WriteLine("              |                 `--' | ", Color.SaddleBrown);
+            outputProvider.WriteLine("         ____ |_         ___|    |___.'", Color.SaddleBrown);
+            outputProvider.WriteLine("        / _/ _____/ ____/ _______| ", Color.Brown);
+            outputProvider.WriteLine();
+            Thread.Sleep(2000);
         }
     }
 }
