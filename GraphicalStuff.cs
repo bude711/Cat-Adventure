@@ -17,7 +17,7 @@ namespace Cat_Adventure
             var j = 1;
             for (int i = 0; i < 30; i++)
             {
-                Console.Clear();
+                Console.Clear();                
                 Console.WriteLine();
 
                 var margin = "".PadLeft(j);
@@ -78,6 +78,7 @@ namespace Cat_Adventure
         public static void WelcomeScreen(IOutputProvider outputProvider)
         {
             Console.Clear();
+            outputProvider.WriteLine("Welcome to Cat Adventure!");           
             Console.WriteLine();
             outputProvider.WriteLine("      ,_  ", Color.DarkOrange);
             outputProvider.WriteLine("      |\\_,-~/|", Color.Orange);
