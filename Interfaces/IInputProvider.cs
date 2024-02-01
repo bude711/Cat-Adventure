@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Cat_Adventure.Interfaces
 {
-    internal interface IInputProvider
+    public interface IInputProvider
     {
         string Read();
     }
