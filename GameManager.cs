@@ -14,7 +14,7 @@ namespace Cat_Adventure
         private IOutputProvider outputProvider;
         public GameState GameState { get; private set; }
 
-        Cat cat = new Cat();
+        public Cat? cat;
         public GameManager() : this(new ConsoleInputProvider(), new ConsoleOutputProvider())
         {
         }
@@ -25,12 +25,15 @@ namespace Cat_Adventure
             GameState = GameState.WaitingToStart;
         }
 
-
         public void Run()
         {
             outputProvider.WriteLine("Welcome to Cat Adventure!");
+            outputProvider.WriteLine("=========================\n");
             GameState = GameState.GameStarted;
-            Thread.Sleep(2000);
+            cat = new Cat(inputProvider, outputProvider);
+
+            outputProvider.WriteLine($"Hello {cat.name}");
+
             outputProvider.WriteLine();
             chooseDestination();
             handleDog();
