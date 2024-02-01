@@ -73,6 +73,35 @@ namespace Cat_Adventure
 
             }
         }
+
+        public static void WelcomeScreen(IOutputProvider outputProvider)
+        {
+            // Console.Clear();
+            Console.WriteLine();
+            outputProvider.WriteLine("      ,_  ");
+            outputProvider.WriteLine("      |\\_,-~/|");
+            outputProvider.WriteLine("      / _  _ |    ,--.");
+            outputProvider.WriteLine("     (  @  @ )   / ,-'");
+            outputProvider.WriteLine("     \\  _T_ /-._( (");
+            outputProvider.WriteLine("      /         `. \\");
+            outputProvider.WriteLine("      |         _  \\ |");
+            outputProvider.WriteLine("      \\ \\ ,  /      |");
+            outputProvider.WriteLine("       || |-_\\__   /");
+            outputProvider.WriteLine("      ((_/`(____,-'");
+            outputProvider.WriteLine();
+        }
+
+        public static void DogEncounter(IOutputProvider outputProvider)
+        {
+            Console.Clear();
+            Console.WriteLine();
+            outputProvider.WriteLine("              |\\_ /| ");
+            outputProvider.WriteLine("              | @ @   Woof!");
+            outputProvider.WriteLine("              |   <>                _");
+            outputProvider.WriteLine("              | _ /\\------____  ((| |))");
+            outputProvider.WriteLine("              |                 `--' | ");
+            outputProvider.WriteLine("         ____ |_         ___|    |___.'");
+            outputProvider.WriteLine("        / _/ _____/ ____/ _______| ");
+        }
     }
 }
-

@@ -29,6 +29,11 @@ namespace Cat_Adventure
         {
             outputProvider.WriteLine("Welcome to Cat Adventure!");
             outputProvider.WriteLine("=========================\n");
+            GraphicalStuff.WelcomeScreen(outputProvider);
+            outputProvider.WriteLine("Press a key to continue\n");
+            Console.ReadKey();
+
+            
             GameState = GameState.GameStarted;
             cat = new Cat(inputProvider, outputProvider);
 
@@ -42,7 +47,8 @@ namespace Cat_Adventure
         }
 
         public void chooseDestination() {
-            outputProvider.WriteLine("You are a cat and you want to go meet up with your cat friends.");
+            //outputProvider.WriteLine("You are a cat and you want to go meet up with your cat friends.");
+            outputProvider.WriteLine($"You are a {cat.name}, a {cat.state} {cat.color} cat and you want to go meet up with your cat friends.");
             outputProvider.WriteLine("Where do you want to go look for them?");
             outputProvider.WriteLine();
             outputProvider.WriteLine("1. the Park");
@@ -81,7 +87,8 @@ namespace Cat_Adventure
 
         public void handleDog()
         {
-            outputProvider.WriteLine("Oh no! On your walk you encounter a dog!");           
+            outputProvider.WriteLine("Oh no! On your walk you encounter a dog!");  
+            GraphicalStuff.DogEncounter(outputProvider);
             outputProvider.WriteLine("What do you do?");
             outputProvider.WriteLine();
             outputProvider.WriteLine("1. hiss at the dog");
