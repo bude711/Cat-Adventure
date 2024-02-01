@@ -11,6 +11,7 @@ namespace Cat_Adventure
 {
     internal class GraphicalStuff
     {
+        
         public static void WalkingCat(IOutputProvider outputProvider)
         {
             var counter = 0;
