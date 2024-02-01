@@ -129,6 +129,7 @@ namespace Cat_Adventure
             outputProvider.WriteLine("Congratulations! You've arrived at your destination.");
             outputProvider.WriteLine("Your friends are here!");
             outputProvider.WriteLine("Now it's time for a cat party!");
+            GraphicalStuff.FenceCats(outputProvider);
 
 
         }
