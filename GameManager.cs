@@ -29,7 +29,7 @@ namespace Cat_Adventure
 
         public void Run()
         {
-            PlayMp3FromFilePath("animal_crossing.mp3");    
+            PlayMusic("animal_crossing.mp3");    
         }
 
         public void StoryEvents()
@@ -47,7 +47,7 @@ namespace Cat_Adventure
             handleDog();
             reachedDestination();
         }
-        public void PlayMp3FromFilePath(string fileName)
+        public void PlayMusic(string fileName)
         {
             using (var audioFile = new AudioFileReader(fileName))
             using (var outputDevice = new WaveOutEvent())
