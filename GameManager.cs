@@ -1,4 +1,5 @@
 ﻿using Cat_Adventure.Interfaces;
+using Console = Colorful.Console;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -83,7 +84,7 @@ namespace Cat_Adventure
 
         public void handleDog()
         {
-            outputProvider.WriteLine("Oh no! On your walk you encounter a dog!");  
+              
             GraphicalStuff.DogEncounter(outputProvider);
             outputProvider.WriteLine("What do you do?");
             outputProvider.WriteLine();
