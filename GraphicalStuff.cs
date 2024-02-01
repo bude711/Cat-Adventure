@@ -107,5 +107,24 @@ namespace Cat_Adventure
             outputProvider.WriteLine();
             Thread.Sleep(2000);
         }
+
+        public static void FenceCats(IOutputProvider outputProvider)
+        {
+            outputProvider.Clear();
+            outputProvider.WriteLine();
+            outputProvider.WriteLine("Yay! Fur-iends!");
+            outputProvider.WriteLine();
+            outputProvider.WriteLine("                    /^--^\\     /^--^\\     /^--^\\", Color.Gray);
+            outputProvider.WriteLine("                    \\____/     \\____/     \\____/", Color.Gray);
+            outputProvider.WriteLine("                    /      \\   /      \\   /      \\", Color.Gray);
+            outputProvider.WriteLine("                   |        | |         | |        |", Color.Gray);
+            outputProvider.WriteLine("                    \\__  __/   \\__  __/   \\__  __/", Color.Gray);
+            outputProvider.WriteLine("|^|^|^|^|^|^|^|^|^|^|^|^\\ \\^|^|^|^/ /^|^|^|^|^\\ \\^|^|^|^|^|^|^|^|^|^|^|^|", Color.Wheat);
+            outputProvider.WriteLine("| | | | | | | | | | | | |\\ \\| | |/ /| | | | | |\\ \\ | | | | | | | | | | |", Color.Wheat);
+            outputProvider.WriteLine("########################/ /######\\ \\###########/ /########################", Color.Green);
+            outputProvider.WriteLine("| | | | | | | | | | | | \\/| | | | \\/| | | | | |\\/ | | | | | | | | | | | | ", Color.Wheat);
+            outputProvider.WriteLine("|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|", Color.Green);
+            Thread.Sleep(2000);
+        }
     }
 }
