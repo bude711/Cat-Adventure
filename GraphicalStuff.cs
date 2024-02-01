@@ -127,5 +127,22 @@ namespace Cat_Adventure
             outputProvider.WriteLine("|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|", Color.Green);
             Thread.Sleep(2000);
         }
+
+        public static void AngryCat(IOutputProvider outputProvider)
+        {
+            Console.Clear();
+            outputProvider.WriteLine("HISSSSSSSSSSSSSSSSSSSSSSS!", Color.Red);
+            outputProvider.WriteLine("                          _", Color.Red);
+            outputProvider.WriteLine("                         \\ \\", Color.Orange);
+            outputProvider.WriteLine("       |\\_/|              | |", Color.Orange);
+            outputProvider.WriteLine("       )O O  ` ,_\\-||||-.  / /", Color.Red);
+            outputProvider.WriteLine("      =\\Y_= /           \\/ / ", Color.Red);
+            outputProvider.WriteLine("         `\"`\\        /     / ", Color.Orange);
+            outputProvider.WriteLine("           |       \\  |    / ", Color.Orange);
+            outputProvider.WriteLine("            \\     /-   \\  \\", Color.Orange);
+            outputProvider.WriteLine("             | |  |     / /  /", Color.Red);
+            outputProvider.WriteLine("             ( (__|     ((__/", Color.Red);
+            Thread.Sleep(2000);
+        }
     }
 }

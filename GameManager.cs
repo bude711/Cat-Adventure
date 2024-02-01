@@ -99,6 +99,7 @@ namespace Cat_Adventure
             {
                 outputProvider.WriteLine("You’ve chosen to hiss at the dog!");
                 outputProvider.WriteLine();
+                GraphicalStuff.AngryCat(outputProvider);
                 outputProvider.WriteLine("You scare off the dog and continue on your path.");
             }
             else if (choice.Contains('2'))
