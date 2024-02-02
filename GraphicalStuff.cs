@@ -144,7 +144,7 @@ namespace Cat_Adventure
 
         public static void AngryCat(IOutputProvider outputProvider)
         {
-            Console.Clear();
+            
             outputProvider.WriteLine();
             Console.ForegroundColor = ConsoleColor.DarkYellow;
             outputProvider.WriteLine("      HISSSSSSSSSSSSSSSSSSSSSSS!");

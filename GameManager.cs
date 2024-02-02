@@ -104,6 +104,7 @@ namespace Cat_Adventure
                     Thread.Sleep(50);
                 }
                 outputProvider.WriteLine();
+                GraphicalStuff.AngryCat(outputProvider);
             }
             else if (choice.Contains('2'))
             {
@@ -131,6 +132,8 @@ namespace Cat_Adventure
                     Thread.Sleep(50);
                 }
                 outputProvider.WriteLine();
+
+                GraphicalStuff.HighFive(outputProvider);
 
             }
             else
@@ -171,7 +174,8 @@ namespace Cat_Adventure
                 Console.Write(character);
                 Thread.Sleep(50);
             }
-            outputProvider.WriteLine();  
+            outputProvider.WriteLine(); 
+            GraphicalStuff.FenceCats(outputProvider);
 
         }
     }
