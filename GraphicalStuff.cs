@@ -150,8 +150,8 @@ namespace Cat_Adventure
         }
 
         public static void HighFive(IOutputProvider outputProvider)
-        {       
-                outputProvider.WriteLine("This dog happens to be a friend! You greet each other and then continue to your destination.");
+        {
+            outputProvider.WriteLine("This dog happens to be a friend! You greet each other and then continue to your destination.");
                 outputProvider.WriteLine();
                 outputProvider.WriteLine();
                 outputProvider.WriteLine("                 *^ \"\" ~~ ,         ", Color.Gray);
