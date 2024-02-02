@@ -101,8 +101,15 @@ namespace Cat_Adventure
         public static void DogEncounter(IOutputProvider outputProvider)
         {
             Console.Clear();
-            outputProvider.WriteLine("Oh no! On your walk you encounter a dog!");
+           
+            var doggo = $"Oh no! On your walk you encounter a dog!";
 
+            foreach (var character in doggo)
+            {
+                Console.Write(character);
+                Thread.Sleep(40);
+            }
+            outputProvider.WriteLine();
             outputProvider.WriteLine();
             Console.ForegroundColor = ConsoleColor.DarkYellow;
             outputProvider.WriteLine("              |\\_ /| ");
@@ -113,15 +120,22 @@ namespace Cat_Adventure
             outputProvider.WriteLine("         ____ |_         ___|    |___.'");
             outputProvider.WriteLine("        / _/ _____/ ____/ _______| ");
             outputProvider.WriteLine();
-            Thread.Sleep(2000);
+            Thread.Sleep(500);
             Console.ResetColor();
         }
 
         public static void FenceCats(IOutputProvider outputProvider)
         {
-            outputProvider.Clear();
+            outputProvider.Clear();          
+
+            var furFriends = $"Yay! Fur-iends!";
+
+            foreach (var character in furFriends)
+            {
+                Console.Write(character);
+                Thread.Sleep(40);
+            }
             outputProvider.WriteLine();
-            outputProvider.WriteLine("Yay! Fur-iends!");
             outputProvider.WriteLine();
             Console.ForegroundColor = ConsoleColor.DarkYellow;
             outputProvider.WriteLine("                    /^--^\\     /^--^\\     /^--^\\");
@@ -144,10 +158,17 @@ namespace Cat_Adventure
 
         public static void AngryCat(IOutputProvider outputProvider)
         {
-            
+            Console.Clear();
+           
+            Console.ForegroundColor = ConsoleColor.DarkYellow;            
+            var hiss = $"      HISSSSSSSSSSSSSSSSSSSSSSS!!";
+
+            foreach (var character in hiss)
+            {
+                Console.Write(character);
+                Thread.Sleep(40);
+            }
             outputProvider.WriteLine();
-            Console.ForegroundColor = ConsoleColor.DarkYellow;
-            outputProvider.WriteLine("      HISSSSSSSSSSSSSSSSSSSSSSS!");
             outputProvider.WriteLine("                          _");
             outputProvider.WriteLine("                         \\ \\");
             outputProvider.WriteLine("       |\\_/|              | |");
@@ -160,12 +181,29 @@ namespace Cat_Adventure
             outputProvider.WriteLine("             ( (__|     ((__/");
             Thread.Sleep(2000);
             Console.ResetColor();
+
+            var hissAtDog = $"You scare off the dog and continue on your path.";
+
+            foreach (var character in hissAtDog)
+            {
+                Console.Write(character);
+                Thread.Sleep(40);
+            }
+            outputProvider.WriteLine();
+
+            outputProvider.WriteLine();
         }
 
         public static void HighFive(IOutputProvider outputProvider)
         {       
-            Console.Clear();
-            outputProvider.WriteLine("This dog happens to be a friend! You greet each other and then continue to your destination.");
+            Console.Clear();           
+            var highFive = $"This dog happens to be a friend! You greet each other and then continue to your destination.";
+
+            foreach (var character in highFive)
+            {
+                Console.Write(character);
+                Thread.Sleep(40);
+            }
             outputProvider.WriteLine();
             outputProvider.WriteLine();
             Console.ForegroundColor = ConsoleColor.DarkYellow;
