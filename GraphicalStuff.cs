@@ -133,7 +133,7 @@ namespace Cat_Adventure
 
         public static void AngryCat(IOutputProvider outputProvider)
         {
-            Console.Clear();
+            
             outputProvider.WriteLine();
             outputProvider.WriteLine("      HISSSSSSSSSSSSSSSSSSSSSSS!", Color.Red);
             outputProvider.WriteLine("                          _", Color.Red);
@@ -150,7 +150,7 @@ namespace Cat_Adventure
         }
 
         public static void HighFive(IOutputProvider outputProvider)
-        {       Console.Clear();
+        {       
                 outputProvider.WriteLine("This dog happens to be a friend! You greet each other and then continue to your destination.");
                 outputProvider.WriteLine();
                 outputProvider.WriteLine();

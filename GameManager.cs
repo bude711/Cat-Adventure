@@ -100,7 +100,6 @@ namespace Cat_Adventure
                 outputProvider.WriteLine("You’ve chosen to hiss at the dog!");
                 outputProvider.WriteLine();
                 GraphicalStuff.AngryCat(outputProvider);
-                outputProvider.WriteLine("You scare off the dog and continue on your path.");
             }
             else if (choice.Contains('2'))
             {
@@ -112,9 +111,8 @@ namespace Cat_Adventure
             {
                 outputProvider.WriteLine("You’ve chosen to high-five the dog!");
                 outputProvider.WriteLine();
-                Thread.Sleep(2000);
-               /* outputProvider.WriteLine("This dog happens to be a friend! You greet each other and then continue to your destination.");*/
                 GraphicalStuff.HighFive(outputProvider);
+
             }
             else
             {
