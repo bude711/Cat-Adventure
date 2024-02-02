@@ -51,7 +51,7 @@ namespace Cat_Adventure
             
             GameState = GameState.GameStarted;
             cat = new Cat(inputProvider, outputProvider);
-
+            
             cat.state = ChooseDestination.LocationOne(inputProvider, outputProvider, cat);
             handleDog();
             reachedDestination();
