@@ -23,7 +23,7 @@ namespace Cat_Adventure
             foreach (var character in nameAsk)
             {
                 Console.Write(character);
-                Thread.Sleep(50);
+                Thread.Sleep(40);
             }
             outputProvider.WriteLine();
             name = inputProvider.Read();
@@ -33,7 +33,7 @@ namespace Cat_Adventure
             foreach (var character in colorAsk)
             {
                 Console.Write(character);
-                Thread.Sleep(50);
+                Thread.Sleep(40);
             }
             outputProvider.WriteLine();
             color = inputProvider.Read();
@@ -43,7 +43,7 @@ namespace Cat_Adventure
             foreach (var character in moodAsk)
             {
                 Console.Write(character);
-                Thread.Sleep(50);
+                Thread.Sleep(40);
             }
             outputProvider.WriteLine();
             state = inputProvider.Read();
