@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Cat_Adventure
 {
-    internal class ConsoleInputProvider: Interfaces.IInputProvider
+    public class ConsoleInputProvider: Interfaces.IInputProvider
     {
         public string Read()
         {

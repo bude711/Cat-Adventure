@@ -6,6 +6,7 @@ using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using NAudio.Wave;
 
 namespace Cat_Adventure
 {
@@ -28,6 +29,11 @@ namespace Cat_Adventure
 
         public void Run()
         {
+            PlayMusic("animal_crossing.mp3");    
+        }
+
+        public void StoryEvents()
+        {
             outputProvider.WriteLine("Welcome to Cat Adventure!");
             outputProvider.WriteLine("=========================\n");
             GraphicalStuff.WelcomeScreen(outputProvider);
@@ -48,8 +54,20 @@ namespace Cat_Adventure
 
             cat.state = ChooseDestination.LocationOne(inputProvider, outputProvider, cat);
             handleDog();
-            reachedDestination();           
-            
+            reachedDestination();
+        }
+        public void PlayMusic(string fileName)
+        {
+            using (var audioFile = new AudioFileReader(fileName))
+            using (var outputDevice = new WaveOutEvent())
+            {
+                outputDevice.Init(audioFile);
+                outputDevice.Play();
+
+                StoryEvents();
+
+                Console.ReadKey();
+            }
         }
       
         public void handleDog()
