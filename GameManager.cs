@@ -1,5 +1,5 @@
 ﻿using Cat_Adventure.Interfaces;
-using Console = Colorful.Console;
+//using Console = Colorful.Console;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -44,7 +44,7 @@ namespace Cat_Adventure
             foreach (var character in pressKey)
             {
                 Console.Write(character);
-                Thread.Sleep(50);
+                Thread.Sleep(40);
             }
            
             Console.ReadKey(true);
@@ -86,7 +86,7 @@ namespace Cat_Adventure
             foreach (var character in mySecondString)
             {
                 Console.Write(character);
-                Thread.Sleep(50);
+                Thread.Sleep(40);
             }
             outputProvider.WriteLine();
            
@@ -95,15 +95,16 @@ namespace Cat_Adventure
             {
 
                 var choiceOne = $"\n" +
-                    $"You’ve chosen to hiss at the dog!\n" +
-                    $"You scare off the dog and continue on your path.";
+                    $"You’ve chosen to hiss at the dog!";
 
                 foreach (var character in choiceOne)
                 {
                     Console.Write(character);
-                    Thread.Sleep(50);
+                    Thread.Sleep(40);
                 }
                 outputProvider.WriteLine();
+                Thread.Sleep(1000);
+                GraphicalStuff.AngryCat(outputProvider);
             }
             else if (choice.Contains('2'))
             {
@@ -114,7 +115,7 @@ namespace Cat_Adventure
                 foreach (var character in choicetwo)
                 {
                     Console.Write(character);
-                    Thread.Sleep(50);
+                    Thread.Sleep(40);
                 }
                 outputProvider.WriteLine();
               
@@ -122,15 +123,17 @@ namespace Cat_Adventure
             else if (choice.Contains('3'))
             {
                 var choiceThree = $"\n" +
-                   $"You’ve chosen to high-five the dog!\n" +
-                   $"This dog happens to be a friend! You greet each other and then continue to your destination.";
+                   $"You’ve chosen to high-five the dog!\n";
 
                 foreach (var character in choiceThree)
                 {
                     Console.Write(character);
-                    Thread.Sleep(50);
+                    Thread.Sleep(40);
                 }
                 outputProvider.WriteLine();
+                Thread.Sleep(1000);
+
+                GraphicalStuff.HighFive(outputProvider);
 
             }
             else
@@ -141,7 +144,7 @@ namespace Cat_Adventure
                 foreach (var character in choiceFour)
                 {
                     Console.Write(character);
-                    Thread.Sleep(50);
+                    Thread.Sleep(40);
                 }
 
             }
@@ -151,7 +154,7 @@ namespace Cat_Adventure
             foreach (var character in pressKey)
             {
                 Console.Write(character);
-                Thread.Sleep(50);
+                Thread.Sleep(40);
             }
             outputProvider.WriteLine();
             Console.ReadKey(true);
@@ -169,10 +172,24 @@ namespace Cat_Adventure
             foreach (var character in end)
             {
                 Console.Write(character);
-                Thread.Sleep(50);
+                Thread.Sleep(40);
             }
-            outputProvider.WriteLine();  
+            outputProvider.WriteLine();
+            Thread.Sleep(1000);
+            GraphicalStuff.FenceCats(outputProvider);
 
+            var endingMessage = $"\n" +
+                         $"Purrfect! You've completed Cat Adventure!\n" +
+                         $"We hope you had a meow-velous time!\n" +
+                         $"With the right catitude, anything is pawsible!\n" +
+                         $"-Team M.E.O.W.\n\n" +
+                         $"Press any key to exit the game.\n";
+
+            foreach (var character in endingMessage)
+            {
+                Console.Write(character);
+                Thread.Sleep(40);
+            }
         }
     }
 }

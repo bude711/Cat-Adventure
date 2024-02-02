@@ -25,7 +25,7 @@ namespace Cat_Adventure
                 foreach (var character in myFirstString)
                  {
                     Console.Write(character);
-                    Thread.Sleep(50);
+                    Thread.Sleep(40);
                  }
                 outputProvider.WriteLine();                      
 
@@ -39,7 +39,7 @@ namespace Cat_Adventure
                     foreach (var character in choiceOne)
                         {
                         Console.Write(character);
-                        Thread.Sleep(50);
+                        Thread.Sleep(40);
                         }
                     outputProvider.WriteLine();
                
@@ -53,7 +53,7 @@ namespace Cat_Adventure
                      foreach (var character in choiceTwo)
                       {
                         Console.Write(character);
-                        Thread.Sleep(50);
+                        Thread.Sleep(40);
                       }
                      outputProvider.WriteLine();
                 
@@ -67,7 +67,7 @@ namespace Cat_Adventure
                      foreach (var character in choiceThree)
                      {
                        Console.Write(character);
-                       Thread.Sleep(50);
+                       Thread.Sleep(40);
                      }
                      outputProvider.WriteLine();
                
@@ -80,7 +80,7 @@ namespace Cat_Adventure
                      foreach (var character in choiceFour)
                      {
                          Console.Write(character);
-                         Thread.Sleep(50);
+                         Thread.Sleep(40);
                      }
                      outputProvider.WriteLine();
                }
@@ -91,7 +91,7 @@ namespace Cat_Adventure
             foreach (var character in hitAKey)
             {
                 Console.Write(character);
-                Thread.Sleep(50);
+                Thread.Sleep(40);
             }
             outputProvider.WriteLine();
             Console.ReadKey(true);
