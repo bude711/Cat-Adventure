@@ -178,6 +178,18 @@ namespace Cat_Adventure
             Thread.Sleep(1000);
             GraphicalStuff.FenceCats(outputProvider);
 
+            var endingMessage = $"\n" +
+                         $"Purrfect! You've completed Cat Adventure!\n" +
+                         $"We hope you had a meow-velous time!\n" +
+                         $"With the right catitude, anything is pawsible!\n" +
+                         $"-Team M.E.O.W.\n\n" +
+                         $"Press any key to exit the game.\n";
+
+            foreach (var character in endingMessage)
+            {
+                Console.Write(character);
+                Thread.Sleep(40);
+            }
         }
     }
 }
