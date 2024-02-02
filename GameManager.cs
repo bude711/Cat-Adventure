@@ -1,5 +1,5 @@
 ﻿using Cat_Adventure.Interfaces;
-using Console = Colorful.Console;
+//using Console = Colorful.Console;
 using System;
 using System.Collections.Generic;
 using System.Data;
