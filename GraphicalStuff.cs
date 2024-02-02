@@ -2,7 +2,6 @@
 using System;
 using System.Collections.Generic;
 using System.Drawing;
-using Console = Colorful.Console;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -26,86 +25,95 @@ namespace Cat_Adventure
                 {
                     case 0:
                         {
-                            outputProvider.WriteLine(margin + "(\\", Color.Orange);
-                            outputProvider.WriteLine(margin + " ))         )\\", Color.Orange);
-                            outputProvider.WriteLine(margin + "((         /  o(.", Color.DarkOrange);
-                            outputProvider.WriteLine(margin + "\\\\.-\"```\"`'=_/=", Color.Orange);
-                            outputProvider.WriteLine(margin + "  >  ,       /", Color.Orange);
-                            outputProvider.WriteLine(margin + "  \\   )__.\\ |", Color.Orange);
-                            outputProvider.WriteLine(margin + "   > / /  ||\\", Color.OrangeRed);
-                            outputProvider.WriteLine(margin + "   \\ \\  \\ \\", Color.Orange);
-                            outputProvider.WriteLine(margin + "   `\" `\" `\"`\"", Color.DarkOrange);
-                            outputProvider.WriteLine("\\||/ ___ ____ _____\\||/ _____ ___ \\||/ __ ____ _ _ _ ______ ", Color.Green);
+                            Console.ForegroundColor = ConsoleColor.DarkYellow;
+                            outputProvider.WriteLine(margin + "(\\");
+                            outputProvider.WriteLine(margin + " ))         )\\");
+                            outputProvider.WriteLine(margin + "((         /  o(.");
+                            outputProvider.WriteLine(margin + "\\\\.-\"```\"`'=_/=");
+                            outputProvider.WriteLine(margin + "  >  ,       /");
+                            outputProvider.WriteLine(margin + "  \\   )__.\\ |");
+                            outputProvider.WriteLine(margin + "   > / /  ||\\");
+                            outputProvider.WriteLine(margin + "   \\ \\  \\ \\");
+                            outputProvider.WriteLine(margin + "   `\" `\" `\"`\"");
+                            Console.ForegroundColor = ConsoleColor.Green;
+                            outputProvider.WriteLine("\\||/ ___ ____ _____\\||/ _____ ___ \\||/ __ ____ _ _ _ ______ ");
                             break;
                         };
                     case 1:
                         {
-                            outputProvider.WriteLine(margin + "(\\", Color.Orange);
-                            outputProvider.WriteLine(margin + " ))         )\\", Color.Orange);
-                            outputProvider.WriteLine(margin + "((         /  o(", Color.DarkOrange);
-                            outputProvider.WriteLine(margin + "\\\\.-\"```\"'`=_/=", Color.Orange);
-                            outputProvider.WriteLine(margin + "  >  ,       /", Color.Orange);
-                            outputProvider.WriteLine(margin + "  \\   )__.|| |", Color.Orange);
-                            outputProvider.WriteLine(margin + "   > | |  ||\\", Color.OrangeRed);
-                            outputProvider.WriteLine(margin + "   || ||  || \\", Color.Orange);
-                            outputProvider.WriteLine(margin + "   `\" `\" `\"`\"", Color.DarkOrange);
-                            outputProvider.WriteLine("\\||/ ___ ____ _____\\||/ _____ ___ \\||/ __ ____ _ _ _ ______ ", Color.Green);
-
+                            Console.ForegroundColor = ConsoleColor.DarkYellow;
+                            outputProvider.WriteLine(margin + "(\\");
+                            outputProvider.WriteLine(margin + " ))         )\\");
+                            outputProvider.WriteLine(margin + "((         /  o(");
+                            outputProvider.WriteLine(margin + "\\\\.-\"```\"'`=_/=");
+                            outputProvider.WriteLine(margin + "  >  ,       /");
+                            outputProvider.WriteLine(margin + "  \\   )__.|| |");
+                            outputProvider.WriteLine(margin + "   > | |  ||\\");
+                            outputProvider.WriteLine(margin + "   || ||  || \\");
+                            outputProvider.WriteLine(margin + "   `\" `\" `\"`\"");
+                            Console.ForegroundColor = ConsoleColor.Green;
+                            outputProvider.WriteLine("\\||/ ___ ____ _____\\||/ _____ ___ \\||/ __ ____ _ _ _ ______ ");
                             break;
                         };
                     case 2:
                         {
-                            outputProvider.WriteLine(margin + "(\\", Color.Orange);
-                            outputProvider.WriteLine(margin + " ))         )\\", Color.Orange);
-                            outputProvider.WriteLine(margin + "((         /  o(.", Color.DarkOrange);
-                            outputProvider.WriteLine(margin + "\\\\.-\"```\"'`=_/=", Color.Orange);
-                            outputProvider.WriteLine(margin + "  >  ,       /", Color.Orange);
-                            outputProvider.WriteLine(margin + "  \\   )__.|| |", Color.Orange);
-                            outputProvider.WriteLine(margin + "   > / /  //\\", Color.OrangeRed);
-                            outputProvider.WriteLine(margin + "  // //  // \\", Color.Orange);
-                            outputProvider.WriteLine(margin + "  `\" `\" `\"`\"", Color.DarkOrange);
-                            outputProvider.WriteLine("\\||/ ___ ____ _____\\||/ _____ ___ \\||/ __ ____ _ _ _ ______ ", Color.Green);
+                            Console.ForegroundColor = ConsoleColor.DarkYellow;
+                            outputProvider.WriteLine(margin + "(\\");
+                            outputProvider.WriteLine(margin + " ))         )\\");
+                            outputProvider.WriteLine(margin + "((         /  o(.");
+                            outputProvider.WriteLine(margin + "\\\\.-\"```\"'`=_/=");
+                            outputProvider.WriteLine(margin + "  >  ,       /");
+                            outputProvider.WriteLine(margin + "  \\   )__.|| |");
+                            outputProvider.WriteLine(margin + "   > / /  //\\");
+                            outputProvider.WriteLine(margin + "  // //  // \\");
+                            outputProvider.WriteLine(margin + "  `\" `\" `\"`\"");
+                            Console.ForegroundColor = ConsoleColor.Green;
+                            outputProvider.WriteLine("\\||/ ___ ____ _____\\||/ _____ ___ \\||/ __ ____ _ _ _ ______ ");
                             break;
                         };
                 }
                 counter++;
                 j++;
                 Thread.Sleep(200);
-
+                Console.ResetColor();
             }
         }
 
         public static void WelcomeScreen(IOutputProvider outputProvider)
         {
-            // Console.Clear();
             Console.WriteLine();
-            outputProvider.WriteLine("      ,_  ", Color.DarkOrange);
-            outputProvider.WriteLine("      |\\_,-~/|", Color.Orange);
-            outputProvider.WriteLine("      / _  _ |    ,--.", Color.DarkOrange);
-            outputProvider.WriteLine("     (  @  @ )   / ,-'", Color.Orange);
-            outputProvider.WriteLine("     \\  _T_ /-._( (", Color.Orange);
-            outputProvider.WriteLine("      /         `. \\", Color.OrangeRed);
-            outputProvider.WriteLine("      |         _  \\ |", Color.Orange);
-            outputProvider.WriteLine("      \\ \\ ,  /      |", Color.DarkOrange);
-            outputProvider.WriteLine("       || |-_\\__   /", Color.DarkOrange);
-            outputProvider.WriteLine("      ((_/`(____,-'", Color.OrangeRed);
+            Console.ForegroundColor = ConsoleColor.DarkYellow;
+            outputProvider.WriteLine("      ,_  ");
+            outputProvider.WriteLine("      |\\_,-~/|");
+            outputProvider.WriteLine("      / _  _ |    ,--.");
+            outputProvider.WriteLine("     (  @  @ )   / ,-'");
+            outputProvider.WriteLine("     \\  _T_ /-._( (");
+            outputProvider.WriteLine("      /         `. \\");
+            outputProvider.WriteLine("      |         _  \\ |");
+            outputProvider.WriteLine("      \\ \\ ,  /      |");
+            outputProvider.WriteLine("       || |-_\\__   /");
+            outputProvider.WriteLine("      ((_/`(____,-'");
             outputProvider.WriteLine();
+            Console.ResetColor();
         }
 
         public static void DogEncounter(IOutputProvider outputProvider)
         {
             Console.Clear();
             outputProvider.WriteLine("Oh no! On your walk you encounter a dog!");
+
             outputProvider.WriteLine();
-            outputProvider.WriteLine("              |\\_ /| ", Color.Brown);
-            outputProvider.WriteLine("              | @ @   Woof!", Color.Brown);
-            outputProvider.WriteLine("              |   <>                _", Color.Brown);
-            outputProvider.WriteLine("              | _ /\\------____   ((| |))", Color.RosyBrown);
-            outputProvider.WriteLine("              |                 `--' | ", Color.SaddleBrown);
-            outputProvider.WriteLine("         ____ |_         ___|    |___.'", Color.SaddleBrown);
-            outputProvider.WriteLine("        / _/ _____/ ____/ _______| ", Color.Brown);
+            Console.ForegroundColor = ConsoleColor.DarkYellow;
+            outputProvider.WriteLine("              |\\_ /| ");
+            outputProvider.WriteLine("              | @ @   Woof!");
+            outputProvider.WriteLine("              |   <>                _");
+            outputProvider.WriteLine("              | _ /\\------____   ((| |))");
+            outputProvider.WriteLine("              |                 `--' | ");
+            outputProvider.WriteLine("         ____ |_         ___|    |___.'");
+            outputProvider.WriteLine("        / _/ _____/ ____/ _______| ");
             outputProvider.WriteLine();
             Thread.Sleep(2000);
+            Console.ResetColor();
         }
 
         public static void FenceCats(IOutputProvider outputProvider)
@@ -114,17 +122,23 @@ namespace Cat_Adventure
             outputProvider.WriteLine();
             outputProvider.WriteLine("Yay! Fur-iends!");
             outputProvider.WriteLine();
-            outputProvider.WriteLine("                    /^--^\\     /^--^\\     /^--^\\", Color.Gray);
-            outputProvider.WriteLine("                    \\____/     \\____/     \\____/", Color.Gray);
-            outputProvider.WriteLine("                    /      \\   /      \\   /      \\", Color.Gray);
-            outputProvider.WriteLine("                   |        | |         | |        |", Color.Gray);
-            outputProvider.WriteLine("                    \\__  __/   \\__  __/   \\__  __/", Color.Gray);
-            outputProvider.WriteLine("|^|^|^|^|^|^|^|^|^|^|^|^\\ \\^|^|^|^/ /^|^|^|^|^\\ \\^|^|^|^|^|^|^|^|^|^|^|^|", Color.Wheat);
-            outputProvider.WriteLine("| | | | | | | | | | | | |\\ \\| | |/ /| | | | | |\\ \\ | | | | | | | | | | |", Color.Wheat);
-            outputProvider.WriteLine("########################/ /######\\ \\###########/ /########################", Color.Green);
-            outputProvider.WriteLine("| | | | | | | | | | | | \\/| | | | \\/| | | | | |\\/ | | | | | | | | | | | | ", Color.Wheat);
-            outputProvider.WriteLine("|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|", Color.Green);
+            Console.ForegroundColor = ConsoleColor.DarkYellow;
+            outputProvider.WriteLine("                    /^--^\\     /^--^\\     /^--^\\");
+            outputProvider.WriteLine("                    \\____/     \\____/     \\____/");
+            outputProvider.WriteLine("                    /      \\   /      \\   /      \\");
+            outputProvider.WriteLine("                   |        | |        | |        |");
+            outputProvider.WriteLine("                    \\__  __/   \\__  __/   \\__  __/");
+            Console.ForegroundColor = ConsoleColor.Yellow;
+            outputProvider.WriteLine("|^|^|^|^|^|^|^|^|^|^|^|^\\ \\^|^|^|^/ /^|^|^|^|^\\ \\^|^|^|^|^|^|^|^|^|^|^|^|");
+            outputProvider.WriteLine("| | | | | | | | | | | | |\\ \\| | |/ /| | | | | |\\ \\| | | | | | | | | | | |");
+            Console.ForegroundColor = ConsoleColor.Green;
+            outputProvider.WriteLine("########################/ /######\\ \\###########/ /#######################");
+            Console.ForegroundColor = ConsoleColor.Yellow;
+            outputProvider.WriteLine("| | | | | | | | | | | | \\/| | | | \\/| | | | | |\\/ | | | | | | | | | | | | ");
+            Console.ForegroundColor = ConsoleColor.Green;
+            outputProvider.WriteLine("|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|");
             Thread.Sleep(2000);
+            Console.ResetColor();
         }
     }
 }
