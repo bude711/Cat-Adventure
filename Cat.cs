@@ -18,14 +18,36 @@ namespace Cat_Adventure
         public Cat(IInputProvider inputProvider, IOutputProvider outputProvider)
         {
             // Prompt player to enter the name of the cat
-            outputProvider.WriteLine("Please enter the name of your cat: ");
+            var nameAsk = $"\nPlease enter the name of your cat: ";
+
+            foreach (var character in nameAsk)
+            {
+                Console.Write(character);
+                Thread.Sleep(50);
+            }
+            outputProvider.WriteLine();
             name = inputProvider.Read();
 
-            outputProvider.WriteLine("Please enter the color of your cat: ");
+            var colorAsk = $"\nPlease enter the color of your cat: ";
+
+            foreach (var character in colorAsk)
+            {
+                Console.Write(character);
+                Thread.Sleep(50);
+            }
+            outputProvider.WriteLine();
             color = inputProvider.Read();
 
-            outputProvider.WriteLine("Please enter the mood of your cat: ");
+            var moodAsk = $"\nPlease enter the mood of your cat: ";
+
+            foreach (var character in moodAsk)
+            {
+                Console.Write(character);
+                Thread.Sleep(50);
+            }
+            outputProvider.WriteLine();
             state = inputProvider.Read();
+           
         }
     }
 }

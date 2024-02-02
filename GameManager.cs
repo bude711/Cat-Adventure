@@ -37,7 +37,16 @@ namespace Cat_Adventure
             outputProvider.WriteLine("Welcome to Cat Adventure!");
             outputProvider.WriteLine("=========================\n");
             GraphicalStuff.WelcomeScreen(outputProvider);
-            outputProvider.WriteLine("Press a key to continue\n");
+
+            var pressKey = $"\n" +
+                         $"Press any key to continue\n" ;
+
+            foreach (var character in pressKey)
+            {
+                Console.Write(character);
+                Thread.Sleep(50);
+            }
+           
             Console.ReadKey(true);
             
             GameState = GameState.GameStarted;
@@ -60,58 +69,110 @@ namespace Cat_Adventure
                 Console.ReadKey();
             }
         }
-
+      
         public void handleDog()
         {
               
             GraphicalStuff.DogEncounter(outputProvider);
-            outputProvider.WriteLine("What do you do?");
-            outputProvider.WriteLine();
-            outputProvider.WriteLine("1. hiss at the dog");
-            outputProvider.WriteLine("2. run around the dog");
-            outputProvider.WriteLine("3. high-five the dog");
-            outputProvider.WriteLine();
-            outputProvider.WriteLine("Please enter the number you would like to choose.");
 
+            var mySecondString = $"What do you do?\n" +               
+                $"\n" +
+                $"1. hiss at the dog\n" +
+                $"2. run around the dog\n" +
+                $"3. high-five the dog\n" +
+                $"\n" +
+                $"Please enter the number you would like to choose.";
+
+            foreach (var character in mySecondString)
+            {
+                Console.Write(character);
+                Thread.Sleep(50);
+            }
+            outputProvider.WriteLine();
+           
             var choice = inputProvider.Read();
             if (choice.Contains('1'))
             {
-                outputProvider.WriteLine("You’ve chosen to hiss at the dog!");
+
+                var choiceOne = $"\n" +
+                    $"You’ve chosen to hiss at the dog!\n" +
+                    $"You scare off the dog and continue on your path.";
+
+                foreach (var character in choiceOne)
+                {
+                    Console.Write(character);
+                    Thread.Sleep(50);
+                }
                 outputProvider.WriteLine();
-                outputProvider.WriteLine("You scare off the dog and continue on your path.");
             }
             else if (choice.Contains('2'))
             {
-                outputProvider.WriteLine("You’ve chosen to run around the dog!");
+                var choicetwo = $"\n" +
+                    $"You’ve chosen to run around the dog!\n" +
+                    $"You bolt into the next street, finding a new path to your destination.";
+
+                foreach (var character in choicetwo)
+                {
+                    Console.Write(character);
+                    Thread.Sleep(50);
+                }
                 outputProvider.WriteLine();
-                outputProvider.WriteLine("You bolt into the next street, finding a new path to your destination.");
+              
             }
             else if (choice.Contains('3'))
             {
-                outputProvider.WriteLine("You’ve chosen to high-five the dog!");
+                var choiceThree = $"\n" +
+                   $"You’ve chosen to high-five the dog!\n" +
+                   $"This dog happens to be a friend! You greet each other and then continue to your destination.";
+
+                foreach (var character in choiceThree)
+                {
+                    Console.Write(character);
+                    Thread.Sleep(50);
+                }
                 outputProvider.WriteLine();
-                outputProvider.WriteLine("This dog happens to be a friend! You greet each other and then continue to your destination.");
+
             }
             else
             {
-                outputProvider.WriteLine("Not a valid option. The dog's owner calls him and your path is cleared.");
+                var choiceFour = $"\n" +
+                  $"Not a valid option. The dog's owner calls him and your path is cleared.";
+
+                foreach (var character in choiceFour)
+                {
+                    Console.Write(character);
+                    Thread.Sleep(50);
+                }
+
+            }
+            var pressKey = $"\n" +
+                         $"Press any key to continue.";
+
+            foreach (var character in pressKey)
+            {
+                Console.Write(character);
+                Thread.Sleep(50);
             }
             outputProvider.WriteLine();
-            outputProvider.WriteLine("Hit any key to continue.");
-            Console.ReadKey();
+            Console.ReadKey(true);
             GraphicalStuff.WalkingCat(outputProvider);
 
         }
 
         public void reachedDestination()
         {
-            outputProvider.WriteLine("Congratulations! You've arrived at your destination.");
-            outputProvider.WriteLine("Your friends are here!");
-            outputProvider.WriteLine("Now it's time for a cat party!");
-            outputProvider.WriteLine();
-            outputProvider.WriteLine("Hit any key to continue.");
-            Console.ReadKey();
-            GraphicalStuff.FenceCats(outputProvider);
+            var end = $"\n" +
+                         $"Congratulations! You've arrived at your destination.\n" +
+                         $"Your friends are here!\n" +
+                         $"Now it's time for a cat party!\n";
+
+            foreach (var character in end)
+            {
+                Console.Write(character);
+                Thread.Sleep(50);
+            }
+            outputProvider.WriteLine();  
+
         }
     }
 }
