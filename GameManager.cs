@@ -174,7 +174,8 @@ namespace Cat_Adventure
                 Console.Write(character);
                 Thread.Sleep(50);
             }
-            outputProvider.WriteLine();  
+            outputProvider.WriteLine(); 
+            GraphicalStuff.FenceCats(outputProvider);
 
         }
     }
