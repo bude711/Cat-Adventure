@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace Cat_Adventure
 {
-    class ConsoleOutputProvider : IOutputProvider
+    public class ConsoleOutputProvider : IOutputProvider
     {
         public void Clear()
         {

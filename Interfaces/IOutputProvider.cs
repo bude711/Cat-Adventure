@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Cat_Adventure.Interfaces
 {
-    internal interface IOutputProvider
+    public interface IOutputProvider
     {
         void Write(string message);
         void WriteLine(string message);
