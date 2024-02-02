@@ -95,7 +95,13 @@ namespace Cat_Adventure
         public static void DogEncounter(IOutputProvider outputProvider)
         {
             Console.Clear();
-            outputProvider.WriteLine("Oh no! On your walk you encounter a dog!");
+            var doggo = $"Oh no! On your walk you encounter a dog!";
+            foreach (var character in doggo)
+            {
+                Console.Write(character);
+                Thread.Sleep(50);
+            }
+            outputProvider.WriteLine();
             outputProvider.WriteLine();
             outputProvider.WriteLine("              |\\_ /| ", Color.Brown);
             outputProvider.WriteLine("              | @ @   Woof!", Color.Brown);

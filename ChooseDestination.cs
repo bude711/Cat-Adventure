@@ -12,7 +12,7 @@ namespace Cat_Adventure
         public static string LocationOne(IInputProvider inputProvider, IOutputProvider outputProvider, Cat cat)
         {
             Console.Clear();
-            var myFirstString = $"You are {cat.name}, a {cat.state} {cat.color} cat and you want to go meet up with your cat friends.\n" +
+            var myFirstString = $"You are {cat.name}, a {cat.state}, {cat.color} cat and you want to go meet up with your cat friends.\n" +
                 $"\n" +
                 $"Where do you want to go look for them?\n" +
                 $"\n" +
@@ -84,9 +84,17 @@ namespace Cat_Adventure
                      }
                      outputProvider.WriteLine();
                }
+            
+            var hitAKey = $"\n" +
+                   $"Press any key to continue." ;
+
+            foreach (var character in hitAKey)
+            {
+                Console.Write(character);
+                Thread.Sleep(50);
+            }
             outputProvider.WriteLine();
-            outputProvider.WriteLine("Hit any key to continue.");
-            Console.ReadKey();
+            Console.ReadKey(true);
 
             GraphicalStuff.WalkingCat(outputProvider);
             return "Adventurous";
