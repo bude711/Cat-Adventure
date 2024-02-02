@@ -23,7 +23,7 @@ namespace Cat_Adventure
 
         public void WriteLine(string message)
         {
-            Console.WriteLine(message);
+            Console.WriteLine(message, Color.White);
         }
 
         public void WriteLine(string message, Color color)

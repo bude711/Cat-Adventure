@@ -32,7 +32,7 @@ namespace Cat_Adventure
             outputProvider.WriteLine("=========================\n");
             GraphicalStuff.WelcomeScreen(outputProvider);
             outputProvider.WriteLine("Press a key to continue\n");
-            Console.ReadKey();
+            Console.ReadKey(true);
             
             GameState = GameState.GameStarted;
             cat = new Cat(inputProvider, outputProvider);
@@ -112,7 +112,9 @@ namespace Cat_Adventure
             {
                 outputProvider.WriteLine("You’ve chosen to high-five the dog!");
                 outputProvider.WriteLine();
-                outputProvider.WriteLine("This dog happens to be a friend! You greet each other and then continue to your destination.");
+                Thread.Sleep(2000);
+               /* outputProvider.WriteLine("This dog happens to be a friend! You greet each other and then continue to your destination.");*/
+                GraphicalStuff.HighFive(outputProvider);
             }
             else
             {
@@ -130,6 +132,7 @@ namespace Cat_Adventure
             outputProvider.WriteLine("Congratulations! You've arrived at your destination.");
             outputProvider.WriteLine("Your friends are here!");
             outputProvider.WriteLine("Now it's time for a cat party!");
+            Thread.Sleep(3000);
             GraphicalStuff.FenceCats(outputProvider);
 
 
